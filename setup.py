@@ -46,11 +46,11 @@ CLASSIFIERS: list[str] = [
     # 'Framework :: Matplotlib',
 ]
 
-with open('README.rst', 'r') as fp:
-    readme = fp.read()
-with open('CONTACT.txt', 'r') as fp:
-    contacts = fp.read()
-long_description = readme + '\n\n' + contacts
+# with open('README.rst', 'r') as fp:
+#     readme = fp.read()
+# with open('CONTACT.txt', 'r') as fp:
+#     contacts = fp.read()
+# long_description = readme + '\n\n' + contacts
 
 setup(name=NAME,
       author=AUTHOR,
@@ -58,7 +58,7 @@ setup(name=NAME,
       maintainer=AUTHOR,
       maintainer_email=AUTHOR_EMAIL,
       description=DESCRIPTION,
-      long_description=long_description,
+    #   long_description=long_description,
       license=LICENSE,
       url=URL,
       version=VERSION,
