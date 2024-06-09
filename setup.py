@@ -2,7 +2,7 @@
 # Copyright (c) 2024-2024 Yuji Omoto
 # License: BSD 3 clause
 
-from setuptools import setup
+from setuptools import setup  # type: ignore
 import textra
 
 DESCRIPTION = "TexTra Web API"
@@ -30,7 +30,7 @@ PACKAGES = [
     'textra'
 ]
 
-CLASSIFIERS = [
+CLASSIFIERS: list[str] = [
     # 'Intended Audience :: Science/Research',
     # 'License :: OSI Approved :: BSD License',
     # 'Programming Language :: Python :: 3',
@@ -65,7 +65,7 @@ setup(name=NAME,
       download_url=DOWNLOAD_URL,
       python_requires=PYTHON_REQUIRES,
       install_requires=INSTALL_REQUIRES,
-      extras_require=EXTRAS_REQUIRE,
+    #   extras_require=EXTRAS_REQUIRE,
       packages=PACKAGES,
       classifiers=CLASSIFIERS
-    )
+)
