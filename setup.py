@@ -12,11 +12,11 @@ setuptools.setup(
     name="textra",
     version=textra.__version__,
     install_requires=requirements,
-    entry_points={
-        'console_scripts': [
-            "textra=textra:main",
-        ]
-    },
+    # entry_points={
+    #     'console_scripts': [
+    #         "textra=textra:main",
+    #     ]
+    # },
     packages=["textra"],
     description="textra web api",
 )
