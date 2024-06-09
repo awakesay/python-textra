@@ -1,9 +1,9 @@
 """
-Class module
+__main__.py
 """
 
 from typing import Final
-from requests_oauthlib import OAuth2Session  # type: ignore
+from requests_oauthlib import OAuth2Session
 from oauthlib.oauth2 import BackendApplicationClient, OAuth2Token
 
 BASE_URL: Final[str] = "https://mt-auto-minhon-mlt.ucri.jgn-x.jp"
@@ -48,7 +48,7 @@ class TextraToken(OAuth2Token):  # OAuth2Token の基底クラスは dict
             ).fetch_token(
                 token_url=self.OAUTH2_URL,
                 client_id=client_id,
-                client_secret=client_secret
+                client_secret=client_secret,
             )
         )
 
@@ -57,13 +57,14 @@ class TextraRequestParameters(dict):
     """
     requests.post の引数に渡す Textra のリクエストパラメーターを生成します。
     """
+
     def __init__(
         self,
         token: TextraToken,
         name: str,
         api_name: str,
         api_param: str,
-        **request_parameters
+        **request_parameters,
     ):
         """
         Description
